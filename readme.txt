@@ -4,6 +4,8 @@
 3. Administrator can change proxy_conf.conf for ip addresslist, usernames and userpasswords.
 
 4. run the follogin commands
+git clone https://github.com/aung10021/Dc.git
+>cd .~/De
 > cd /home/[username]
 > chmod +x proxy.sh
 > ./proxy.sh
