@@ -1,6 +1,6 @@
 #!/bin/bash
 
-status=$(sudo service --status-all |grep squid)
-if [[ $status == *"[ - ]"* ]]; then
-  sudo service squid start
+status=$(sudo service squid status)
+if [[ $status != *"Active: active (running) "* ]]; then
+  sudo service squid restart
 fi
