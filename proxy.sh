@@ -100,6 +100,9 @@ echo "squid restarting..."
 sudo service squid restart
 echo "squid restarted"
 
+sudo iptables -P FORWARD ACCEPT
+sudo iptables -F
+
 ( crontab -l | grep -v -F "/etc/squid/monitor_squid.sh") | crontab -
 crontab -l > mycron
 echo "* * * * * /etc/squid/monitor_squid.sh" >> mycron
